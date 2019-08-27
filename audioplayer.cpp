@@ -4,14 +4,14 @@
 AudioPlayer::AudioPlayer(QObject *parent): QAbstractListModel(parent)
 {
     QDir mDirect(QDir::homePath()+"/Музыка"); //указ путь к папке
-    mData = mDirect.entryInfoList(QDir::AllDirs | QDir::NoDotAndDotDot);
+    mData = mDirect.entryInfoList(QDir::Files | QDir::NoDotAndDotDot);
     //qDebug()<< mDirect.entryList();
 
 }
 
 int AudioPlayer::rowCount(const QModelIndex &parent) const
 {   Q_UNUSED(parent)
-    qDebug()<< mData.length() ;
+    qDebug()<< mData.count() ;
     return mData.count();
 }
 

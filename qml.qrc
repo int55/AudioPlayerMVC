@@ -11,6 +11,6 @@
         <file>Explorer.qml</file>
         <file>folder.png</file>
         <file>mp3.png</file>
-        <file>ListView.qml</file>
+        <file>CustomListView.qml</file>
     </qresource>
 </RCC>

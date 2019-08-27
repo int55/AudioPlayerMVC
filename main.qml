@@ -4,16 +4,18 @@ import QtQuick.Controls 1.4
 
 Window {
     visible: true
-    width: 350
+    width: 330
     height: 300
     title: qsTr("Audio Player")
+    color: "gray"
 
     property alias volumeBar: volumeBar
     property string curPath: "false"
-
+Column{
+    anchors.fill: parent
     Rectangle{
         id: rect1
-        anchors.centerIn: parent
+        anchors.horizontalCenter: parent.horizontalCenter
         width: 332; height: 154
         border.color: "black"
         radius: 5
@@ -23,6 +25,8 @@ Window {
 
         ScreenInfo {
             id: screenInfo
+            x: 0
+            y: 0
             color: "darkblue"
             OpenButton {
             }
@@ -56,8 +60,14 @@ Window {
             x: 10
         }
 
+        CustomListView {
+            id: listV1
+            x: 0
+            height: 100 ; anchors.topMargin: 1; width: 332
+            anchors.top: rect1.bottom
+
+        }
+
     } //---------Rectangle---------
-    ListView {
-        anchors.centerIn: parent
-    }
+}//--------Column-------------
 } //---------window---------
