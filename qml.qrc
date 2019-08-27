@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>ScreenInfo.qml</file>
+        <file>PlayButton.qml</file>
+        <file>StopButton.qml</file>
+        <file>BackButton.qml</file>
+        <file>ForwardButton.qml</file>
+        <file>VolumeBar.qml</file>
+        <file>OpenButton.qml</file>
+        <file>Explorer.qml</file>
+        <file>folder.png</file>
+        <file>mp3.png</file>
+        <file>ListView.qml</file>
+    </qresource>
+</RCC>
