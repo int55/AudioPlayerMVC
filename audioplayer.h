@@ -22,7 +22,8 @@ public:
     QVariant data(const QModelIndex &index, int role= Qt::DisplayRole ) const;
     QHash<int, QByteArray> roleNames() const;
 
-    Q_INVOKABLE void startPlay(QString &path);
+    Q_INVOKABLE void startPlay(const QString &path);
+    Q_INVOKABLE void stopPlay();
 
 
 private:

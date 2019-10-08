@@ -16,6 +16,9 @@ Rectangle{    //--------- p l a y ----------------------------------------------
         anchors.fill: parent
         onClicked: {
             myModelMVC.startPlay(curPath)
+            if(curPath)
+                myModelMVC.startPlay(curPath)
+            else console.log("path is not defined!")
         }
     }
 }

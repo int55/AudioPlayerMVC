@@ -36,11 +36,21 @@ QHash<int, QByteArray> AudioPlayer::roleNames() const
     return roles;
 }
 
-void AudioPlayer::startPlay(QString &path)
+void AudioPlayer::startPlay(const QString &path)
 {
+
+    if(player.state() == QMediaPlayer::State::PlayingState){
+        player.stop();
+    }
+
     player.setMedia(QUrl::fromLocalFile(path));
     player.setVolume(50);
     player.play();
     //time->start(1000);
 }
 
+void AudioPlayer::stopPlay(){
+    if(player.state() == QMediaPlayer::State::PlayingState){
+        player.stop();
+    }
+}

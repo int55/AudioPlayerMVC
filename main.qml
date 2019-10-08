@@ -10,7 +10,10 @@ Window {
     color: "gray"
 
     property alias volumeBar: volumeBar
-    property string curPath: "false"
+    property string curPath
+    property string nameinf
+    property bool isOpen: true
+
 Column{
     anchors.fill: parent
     Rectangle{
@@ -46,10 +49,20 @@ Column{
             }
             BackButton {
                 id: back
+                label: qsTr("<<")
+                onClicked: {
+                    if(listV1.curIndex > 0)
+                        listV1.curIndex--
+                }
             }
             ForwardButton {
                 id: forward
                 x: 256
+                label: qsTr(">>")
+                onClicked: {
+                    if(listV1.curIndex < listV1.count)
+                        listV1.curIndex++
+                }
             }
         }//-----------Row--------------
 

@@ -16,7 +16,9 @@ Rectangle{
         id: openBut
         anchors.fill: parent
         onClicked: {
-            myModelMVC.setOpen()
+            //myModelMVC.setOpen()
+            isOpen = true
+            console.log(isOpen)
         }
     }
 }

@@ -15,6 +15,7 @@ Rectangle{    //--------- s t o p ----------------------------------------------
         id: stopBut
         anchors.fill: parent
 
+        onClicked: myModelMVC.stopPlay()
     }
 
 }
