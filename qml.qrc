@@ -4,8 +4,6 @@
         <file>ScreenInfo.qml</file>
         <file>PlayButton.qml</file>
         <file>StopButton.qml</file>
-        <file>BackButton.qml</file>
-        <file>ForwardButton.qml</file>
         <file>VolumeBar.qml</file>
         <file>OpenButton.qml</file>
         <file>Explorer.qml</file>

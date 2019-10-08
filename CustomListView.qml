@@ -16,6 +16,7 @@ ScrollView{
             width: parent.width
             height: 25
             border.color: area2.pressed? "gold" : "black"
+            color: ListView.isCurrentItem ? " lightblue" : " beige "
             radius: 3
             Text {
                 text: model.nameFold
@@ -27,6 +28,7 @@ ScrollView{
                 onClicked: {
                     nameinf = model.nameFold
                     curPath = model.pathFold
+                    view.currentIndex = model.index
 
                 }
                 Connections{

@@ -4,7 +4,7 @@ import QtQuick 2.2
 
 Window {
     id: windowsSearchFile
-    visible: isOpen  // on /off window
+    visible: true
     width: 250
     height: 450
     color: "gray"

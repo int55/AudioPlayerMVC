@@ -7,12 +7,16 @@ Item{
         minimumValue: 0
         maximumValue: 100
         value: 40
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+                var procent = parent.width/100
+                parent.value = mouseX/procent
+                myModelMVC.setVolume(slidBar.value)
+                //myModelMVC.setVolume(parent.value)
+            }
+        }
     }
-//    Text {
-//        anchors.top: slidBar.bottom
-//        text: qsTr("volume")
-//        font.pointSize: 8
 
-//    }
 
 }
